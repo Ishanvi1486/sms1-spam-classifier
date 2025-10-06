@@ -4,4 +4,7 @@ pandas
 nltk
 numpy
 nltk_data
-
+joblib
+nltk
+wordcloud
+matplotlib
