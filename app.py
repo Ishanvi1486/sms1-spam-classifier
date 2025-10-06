@@ -3,12 +3,17 @@ import pickle
 import sklearn
 from nltk.corpus import stopwords
 import nltk 
+import os
 import string 
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
-nltk.download('punkt')
-nltk.download('stopwords')
+# Make sure nltk looks inside your project folder for data
+nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
+nltk.data.path.append(nltk_data_path)
 
+# Download required resources to that folder
+nltk.download('punkt', download_dir=nltk_data_path)
+nltk.download('stopwords', download_dir=nltk_data_path)
 
 
 
@@ -64,4 +69,5 @@ if st.button('Click to Predict'):
         st.header("Spam")
     else:
         st.header('Not Spam')
+
 
