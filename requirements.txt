@@ -3,7 +3,6 @@ scikit-learn
 pandas
 nltk
 numpy
-nltk_data
 joblib
 nltk
 wordcloud
